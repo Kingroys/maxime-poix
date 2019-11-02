@@ -1,0 +1,16 @@
+###> Maxime POIX ###
+_info_/*
+.DS_Store
+.idea/*
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.*.local
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/web-server-bundle ###
+/.web-server-pid
+###< symfony/web-server-bundle ###
