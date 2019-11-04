@@ -1,0 +1,21 @@
+{% extends "front/base.html.twig" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('front/js/init.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <header>
+            <img src="{{ asset('front/images/maxime_poix.png') }}" id="logo" alt="{{ title }}" title="{{ title }}" /><br>
+            <a href="{{ path('resumeDisplay') }}" class="cv" title="Maxime POIX - Télécharger mon CV" target="_blank">
+                telecharger_mon_cv();
+            </a>
+        </header>
+        <main class="isWriting">{{ resume }}</main>
+    </div>
+{% endblock %}
