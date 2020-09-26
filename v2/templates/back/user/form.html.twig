@@ -1,0 +1,29 @@
+{% extends "back/base.html.twig" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col padding-md">
+            {{ title }}
+        </div>
+    </div>
+    {{ form_start(form) }}
+        <div class="form-errors">
+            {{ form_errors(form) }}
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
+            </div>
+            <div class="form-group col-md-6">
+                <label for="password">Password</label>
+                {{ form_widget(form.password, {'attr': {'class': 'form-control', 'placeholder': 'Mot de passe'}}) }}
+            </div>
+        </div>
+        {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+    {{ form_end(form) }}
+{% endblock %}

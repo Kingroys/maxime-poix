@@ -1,0 +1,42 @@
+{% extends "back/base.html.twig" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col padding-md">
+            {{ title }} <span class="badge badge-secondary">{{ users|length }}</span>
+        </div>
+        <div class="col padding-md align-right">
+            <a href="{{ path('adminUserAdd') }}"><span class="oi oi-plus float-right" title="Ajouter" aria-hidden="true"></span></a>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Utilisateur</th>
+                <th scope="col">Modifier</th>
+                <th scope="col">Supprimer</th>
+            </tr>
+        </thead>
+        {% for user in users %}
+            <tr>
+                <td scope="row">{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <a href="{{ path('adminUserEdit', {'id': user.id}) }}">
+                        <span class="oi oi-pencil" title="Modifier" aria-hidden="true"></span>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ path('adminUserDelete', {'id': user.id}) }}">
+                        <span class="oi oi-circle-x" title="Supprimer" aria-hidden="true"></span>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

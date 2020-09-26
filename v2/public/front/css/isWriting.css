@@ -1,0 +1,13 @@
+.isWriting{
+	color:#00ff00;
+	font-size:15px;
+	font-family: Courier;
+}
+.isWriting:after{
+	display:inline-block;
+	height:4px;
+	width:8px;
+	background-color:#00ff00;
+	content:' ';
+	animation: blinker 1s linear infinite;
+}
