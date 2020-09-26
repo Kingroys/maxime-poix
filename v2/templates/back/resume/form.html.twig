@@ -1,0 +1,25 @@
+{% extends "back/base.html.twig" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col padding-md">
+            {{ title }}
+        </div>
+    </div>
+    {{ form_start(form) }}
+        <div class="form-errors">
+            {{ form_errors(form) }}
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="text">Votre CV</label>
+                {{ form_widget(form.text, {'attr': {'class': 'form-control', 'rows': '25', 'placeholder': '...'}}) }}
+            </div>
+        </div>
+        {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+    {{ form_end(form) }}
+{% endblock %}

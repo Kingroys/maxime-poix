@@ -1,0 +1,47 @@
+<?php $title = "Maxime POIX - Ingénieur études et développement"; ?>
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title><?=$title?></title>
+        <meta charset="utf-8" />
+        <meta name="robots" content="index, follow" />
+        <meta name="title" content="<?=$title?>" />
+        <meta name="description" content="Maxime POIX, ingénieur études et développement sur la région Lyonnaise chez Norsys." />
+        <meta name="keywords" content="Maxime POIX, ingénieur études et développement, développeur Lyon, PHP 7, Zend Expressive, AngularJS, ES6, Algolia, ElasticSearch, Git, GitLab, Varnish, Redis, Scrum, Kanban" />
+        <meta name="copyright" content="Maxime POIX" />
+        <meta http-equiv="content-style-type" content="text/css" />
+        <meta http-equiv="content-language" content="fr" />
+        <meta name="content-language" content="fr" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="canonical" href="/">
+        <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="public/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" media="screen" href="public/css/reset.css" />
+        <link rel="stylesheet" media="screen" href="public/css/styles.css" />
+        <link rel="stylesheet" media="screen" href="public/css/isWriting.css" />
+        <link rel="stylesheet" media="screen" href="public/css/animations.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="public/js/init.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-86175096-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+    <body>
+        <div class="content">
+            <header>
+                <img src="public/images/maxime_poix.png" id="logo" alt="<?=$title?>" title="<?=$title?>" /><br>
+                <a href="public/cv.php" class="cv" title="Maxime POIX - Télécharger mon CV" target="_blank">
+                    telecharger_mon_cv();
+                </a>
+            </header>
+            <main class="isWriting"><?=strip_tags(file_get_contents('./public/cv.php'))?></main>
+        </div>
+    </body>
+</html>

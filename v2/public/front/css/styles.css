@@ -1,0 +1,23 @@
+body {
+	background-color: #000;
+	color: #00ff00;
+	font-size: 15px;
+	font-family: Courier, serif;
+}
+.content {
+	margin: 25px;
+}
+header {
+    margin-bottom: 25px;
+}
+header img {
+	max-width: 100%;
+}
+header a {
+	display: inline-block;
+    margin-top: 25px;
+    color: #00ff00;
+}
+header a:hover {
+    animation: blinker 1s linear infinite;
+}
