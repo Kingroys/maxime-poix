@@ -1,3 +1,6 @@
+# Prefer static index.html over PHP for Vercel
+index.php
+
 # Symfon backend (deploy separately if needed)
 v2/
 
