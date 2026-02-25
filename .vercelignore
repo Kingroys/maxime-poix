@@ -1,0 +1,9 @@
+# Symfon backend (deploy separately if needed)
+v2/
+
+# Other project folders not part of the main site
+projets/
+
+# IDE and OS
+.idea
+.DS_Store
