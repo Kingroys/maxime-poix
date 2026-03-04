@@ -1,139 +1,455 @@
 <!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <title>Maxime POIX - Ingénieur études et développement</title>
-        <meta charset="utf-8" />
-        <meta name="robots" content="index, follow" />
-        <meta name="title" content="Maxime POIX - Ingénieur études et développement" />
-        <meta name="description" content="Maxime POIX, ingénieur études et développement sur la région Lyonnaise chez Norsys." />
-        <meta name="keywords" content="Maxime POIX, ingénieur études et développement, développeur Lyon, PHP 7, Zend Expressive, AngularJS, ES6, Algolia, ElasticSearch, Git, GitLab, Varnish, Redis, Scrum, Kanban" />
-        <meta name="copyright" content="Maxime POIX" />
-        <meta http-equiv="content-style-type" content="text/css" />
-        <meta http-equiv="content-language" content="fr" />
-        <meta name="content-language" content="fr" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <link rel="canonical" href="/">
-        <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="public/images/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" media="screen" href="public/css/reset.css" />
-        <link rel="stylesheet" media="screen" href="public/css/styles.css" />
-        <link rel="stylesheet" media="screen" href="public/css/isWriting.css" />
-        <link rel="stylesheet" media="screen" href="public/css/animations.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="public/js/init.js"></script>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lorem ipsum one page resume" />
+  <title>Lorem Ipsum | One Page Resume</title>
+  <link rel="icon" href="public/images/favicon.ico" type="image/x-icon" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-            ga('create', 'UA-86175096-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-    </head>
-    <body>
-        <div class="content">
-            <header>
-                <img src="public/images/maxime_poix.png" id="logo" alt="Maxime POIX - Ingénieur études et développement" title="Maxime POIX - Ingénieur études et développement" /><br>
-                <a href="public/cv.txt" class="cv" title="Maxime POIX - Télécharger mon CV" target="_blank" download>
-                    telecharger_mon_cv();
-                </a>
-            </header>
-            <main class="isWriting"><pre>Maxime POIX - Ingénieur études et développement
+    :root {
+      --bg: #ffffff;
+      --panel: #ffffff;
+      --text: #000000;
+      --muted: #333333;
+      --line: #000000;
+      --line-soft: #bfbfbf;
+      --sidebar-w: 300px;
+      --separator-space: 2rem;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important;
+    }
 
-/**
- * Social medias
- *
- * contact stuff
- */
+    html {
+      scroll-behavior: smooth;
+    }
 
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
 
-Email: contact.maximepoix@gmail.com
-LinkedIn: linkedin.com/in/maxime-poix-70346641/
-Viadeo: viadeo.com/p/0021bxqa3oxnw2mv
-Twitter: twitter.com/maximepoix
+    .frame {
+      width: min(1280px, calc(100% - 1.2rem));
+      margin: 0.6rem auto;
+      min-height: calc(100vh - 1.2rem);
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr;
+      gap: 0.8rem;
+      align-items: start;
+    }
 
+    .sidebar {
+      position: sticky;
+      top: 0.6rem;
+      max-height: calc(100vh - 1.2rem);
+      overflow: auto;
+      border: none;
+      background: var(--panel);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
 
-/**
- * Experiences
- *
- * do stuff
- */
+    .brand {
+      text-align: center;
+      margin-bottom: 0;
+      animation: rise 500ms ease both;
+    }
 
+    .brand img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto 0.75rem;
+    }
 
-Job: Ingénieur études et développement
-Company: Norsys
-Date: juin 2018 – aujourd'hui
-Location: Région de Lyon, France
-Mission: Mister Auto
+    .brand h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.18rem;
+    }
 
----
+    .brand p {
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
 
-Job: Ingénieur études et développement
-Company: Mister Auto
-Date: juin 2018 – aujourd'hui
-Location: Région de Lyon, France
-Skills: PHP 7 / Zend Expressive / AngularJS / ES6 / Algolia / ElasticSearch / Git / GitLab / Varnish / Redis / Scrum / Kanban
+    .menu {
+      list-style: none;
+      display: grid;
+      gap: 0.45rem;
+      margin-bottom: 0;
+    }
 
-Migration du site legacy sur Zend Expressive
+    .menu a {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      padding: 0.5rem 0.7rem;
+      color: #000;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: transform 160ms ease, background 160ms ease;
+    }
 
----
+    .menu a:hover,
+    .menu a.active {
+      background: #000;
+      color: #fff;
+      transform: translateX(2px);
+    }
 
-Job: Développeur Full Stack
-Company: Mon UniVert
-Date: sept. 2013 – juin 2018
-Location: Région de Lyon, France
-Skills: HTML / CSS / JS / PHP / MySQL / Google Maps / NodeJs / MongoDb / SolR / ElasticSearch
+    .menu-dot {
+      width: 6px;
+      height: 6px;
+      background: currentColor;
+      flex: none;
+    }
 
-• Déc. 2017 - juin 2018 : site du challenge de la mobilité pour la région Auvergne-Rhône-Alpes.
-• Août 2017 - déc. 2018 : CRM (Calendrier, messagerie interne, gestion de fichiers).
-• Avr. 2017 : Migration d'un outil interne de la Caisse d'Epargne de PHP à NodeJs.
-• 2016 : site de mise en valeur du patrimoine avec carte interactive.
-• 2015 : site de centralisation de plus de 600 000 PDF avec océrisation des contenus.
-• 2013 : back-office de l'application mobile iOS / Android "L'empreinte des Grandes Alpes" - primée en tant que meilleure application touristique en 2015 aux palmes du tourisme numérique.
-• Création d'un framework minimaliste + back-office.
+    .sidebar-foot {
+      border-top: 1px solid var(--line);
+      padding-top: var(--separator-space);
+      display: grid;
+      gap: 0.35rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
 
----
+    .sidebar-foot a {
+      text-decoration: none;
+      color: #000;
+      border-bottom: 1px solid transparent;
+      width: fit-content;
+    }
 
-Job: Développeur
-Company: Terre Graphique
-Date: avr. 2009 – août 2013
-Location: Région de Lyon, France
-Skills: HTML / CSS / JS / PHP / MySQL / Suite Adobe / Gestion de projet
+    .sidebar-foot a:hover {
+      border-bottom-color: #000;
+    }
 
-• 2012 - 2013 : site d'annonces immobilières géolocalisées.
-• 2012 : back-office d'une application mobile de guidage en vélo.
-• 2010 : sites e-commerce.
+    .content {
+      border: none;
+      background: var(--panel);
+      padding: 1rem;
+    }
 
+    .section {
+      border: none;
+      border-bottom: 1px solid var(--line);
+      padding: var(--separator-space) 0;
+      margin-bottom: 0;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 420ms ease, transform 420ms ease;
+      scroll-margin-top: 1rem;
+    }
 
-/**
- * Studies
- *
- * learn stuff
- */
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
+    .section:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
 
-School: EPSI
-Diploma: Master 2 (M2) Domaine d'études Ingénierie informatique - Spécialité mobile / Gestion de projet
-Date: 2013 – 2015
-Skills: HTML / CSS / JS / PHP / MySQL / C++ / Java / JEE / JSP / CUDA / Symfony / AngularJs / Oracle / SQL Server / Scrum / Kanban / Gestion de projet / Gestion des risques / Management RH
-Thesis: "Quel avenir pour les web-agencies face aux mutations technologiques et à la concurrence ?"
+    .section:first-child {
+      padding-top: 0;
+    }
 
----
+    .label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #000;
+      border: 1px solid #000;
+      padding: 0.28rem 0.58rem;
+      margin-bottom: 0.62rem;
+    }
 
-School: IUT de Saint Etienne
-Diploma: Licence Animateur des Technologies de l'Information et de l'Internet
-Date: 2008 – 2009
-Skills: HTML / CSS / JS / PHP / Gestion de projet / Suite Adobe
+    h2 {
+      font-size: clamp(1.28rem, 2.6vw, 2rem);
+      line-height: 1.2;
+      margin-bottom: 0.45rem;
+      color: #000;
+    }
 
----
+    p {
+      color: var(--muted);
+      line-height: 1.72;
+      font-size: 0.94rem;
+    }
 
-School: Lycée Carriat
-Diploma: BTS Domaine d'études Informatique de Gestion
-Date: 2006 – 2008
-Skills: HTML / CSS / JS / PHP / Merise / UML / VB / VBA / C#</pre></main>
+    .hero-cta {
+      margin-top: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .btn {
+      text-decoration: none;
+      border: 1px solid #000;
+      padding: 0.52rem 0.92rem;
+      font-weight: 600;
+      font-size: 0.83rem;
+      color: #000;
+      background: #fff;
+      transition: background 160ms ease, color 160ms ease;
+    }
+
+    .btn:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin-top: 0.7rem;
+    }
+
+    .block {
+      border: none;
+      border-left: 1px solid var(--line);
+      padding: 0.1rem 0 0.1rem 0.7rem;
+      background: transparent;
+    }
+
+    .block h3 {
+      font-size: 0.94rem;
+      margin-bottom: 0.28rem;
+      color: #000;
+    }
+
+    .block p,
+    .block li,
+    .timeline .date {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .skill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+    }
+
+    .skill-row span {
+      border: 1px solid #000;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+      color: #000;
+    }
+
+    .timeline {
+      list-style: none;
+      display: grid;
+      gap: 0.7rem;
+      margin-top: 0.55rem;
+    }
+
+    .timeline li {
+      border-left: 1px solid #000;
+      padding-left: 0.72rem;
+      position: relative;
+    }
+
+    .timeline li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: #000;
+      position: absolute;
+      left: -4px;
+      top: 0.38rem;
+    }
+
+    .timeline .role {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 0.45rem;
+      margin-top: 0.55rem;
+    }
+
+    .contact-list a,
+    .contact-list span {
+      color: #000;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        background: #fff;
+        color: #000;
+      }
+      50% {
+        background: #000;
+        color: #fff;
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .frame {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: relative;
+        top: 0;
+        max-height: none;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="maxime_poix.png" alt="Logo" />
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+
+      <ul class="menu" id="menu">
+        <li><a href="#home" class="active"><span class="menu-dot"></span>Home</a></li>
+        <li><a href="#profile"><span class="menu-dot"></span>Profile</a></li>
+        <li><a href="#history"><span class="menu-dot"></span>History</a></li>
+      </ul>
+
+      <div class="sidebar-foot">
+        <span>Lorem ipsum dolor sit amet.</span>
+        <a href="#">lorem.ipsum@example.com</a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="section" id="home">
+        <span class="label">Home</span>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu volutpat odio facilisis mauris sit amet massa vitae tortor condimentum lacinia quis vel eros.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#">Lorem Ipsum</a>
+          <a class="btn" href="#">Dolor Sit Amet</a>
         </div>
-    </body>
+      </section>
+
+      <section class="section" id="profile">
+        <span class="label">Profile</span>
+        <h2>Consectetur Adipiscing Elit</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet porttitor eget dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus.</p>
+
+        <div class="split">
+          <div class="block">
+            <h3>Lorem Ipsum</h3>
+            <p>Quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui sapien.</p>
+          </div>
+          <div class="block">
+            <h3>Dolor Sit Amet</h3>
+            <p>Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span>Lorem</span><span>Ipsum</span><span>Dolor</span><span>Sit</span><span>Amet</span><span>Consectetur</span>
+        </div>
+      </section>
+
+      <section class="section" id="history">
+        <span class="label">History</span>
+        <h2>Lorem Ipsum Timeline</h2>
+        <ul class="timeline">
+          <li>
+            <div class="role">Lorem Ipsum Dolor Sit</div>
+            <div class="date">2018 - Praesent</div>
+            <p>Urna molestie at elementum eu facilisis sed odio morbi quis commodo odio aenean.</p>
+          </li>
+          <li>
+            <div class="role">Amet Consectetur Adipiscing</div>
+            <div class="date">2013 - 2018</div>
+            <p>Vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue.</p>
+          </li>
+          <li>
+            <div class="role">Elit Sed Do Eiusmod</div>
+            <div class="date">2009 - 2013</div>
+            <p>Ac tortor dignissim convallis aenean et tortor at risus viverra adipiscing at in tellus.</p>
+          </li>
+        </ul>
+
+        <ul class="contact-list">
+          <li><span>Email:</span> <a href="#">lorem.ipsum@example.com</a></li>
+          <li><span>Link:</span> <a href="#">lorem-ipsum-dolor</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const links = document.querySelectorAll('#menu a');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.16 });
+
+    sections.forEach((section) => revealObserver.observe(section));
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        links.forEach((link) => {
+          const active = link.getAttribute('href') === `#${entry.target.id}`;
+          link.classList.toggle('active', active);
+        });
+      });
+    }, { threshold: 0.45 });
+
+    sections.forEach((section) => navObserver.observe(section));
+  </script>
+</body>
 </html>

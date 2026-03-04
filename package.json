@@ -1,7 +1,0 @@
-{
-  "name": "maxime-poix",
-  "private": true,
-  "scripts": {
-    "build": "mkdir -p out && cp index.html out/ && cp -r public out/"
-  }
-}
