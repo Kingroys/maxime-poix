@@ -3,453 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lorem ipsum one page resume" />
-  <title>Lorem Ipsum | One Page Resume</title>
+  <meta name="description" content="Maxime Poix - Engineering Team Lead in Lyon. 16+ years in software delivery, technical leadership, performance, modernization, and AI-assisted engineering workflows." />
+  <meta name="author" content="Maxime Poix" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://www.maximepoix.fr/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Maxime Poix" />
+  <meta property="og:title" content="Maxime Poix | Resume" />
+  <meta property="og:description" content="Engineering Team Lead with 16+ years of experience in delivery, architecture, performance, and AI-enabled engineering." />
+  <meta property="og:url" content="https://www.maximepoix.fr/" />
+  <meta property="og:image" content="https://www.maximepoix.fr/images/maxime_poix.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Maxime Poix | Resume" />
+  <meta name="twitter:description" content="Engineering Team Lead focused on software delivery, technical leadership, and AI-assisted engineering workflows." />
+  <meta name="twitter:image" content="https://www.maximepoix.fr/images/maxime_poix.png" />
+  <title>Maxime Poix | Resume</title>
   <link rel="icon" href="public/images/favicon.ico" type="image/x-icon" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-
-    :root {
-      --bg: #ffffff;
-      --panel: #ffffff;
-      --text: #000000;
-      --muted: #333333;
-      --line: #000000;
-      --line-soft: #bfbfbf;
-      --sidebar-w: 300px;
-      --separator-space: 2rem;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      border-radius: 0 !important;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family: 'Poppins', sans-serif;
-      color: var(--text);
-      background: var(--bg);
-    }
-
-    .frame {
-      width: min(1280px, calc(100% - 1.2rem));
-      margin: 0.6rem auto;
-      min-height: calc(100vh - 1.2rem);
-      display: grid;
-      grid-template-columns: var(--sidebar-w) 1fr;
-      gap: 0.8rem;
-      align-items: start;
-    }
-
-    .sidebar {
-      position: sticky;
-      top: 0.6rem;
-      max-height: calc(100vh - 1.2rem);
-      overflow: auto;
-      border: none;
-      background: var(--panel);
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .brand {
-      text-align: center;
-      margin-bottom: 0;
-      animation: rise 500ms ease both;
-    }
-
-    .brand img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto 0.75rem;
-    }
-
-    .brand h1 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 0.18rem;
-    }
-
-    .brand p {
-      color: var(--muted);
-      font-size: 0.84rem;
-    }
-
-    .menu {
-      list-style: none;
-      display: grid;
-      gap: 0.45rem;
-      margin-bottom: 0;
-    }
-
-    .menu a {
-      display: flex;
-      align-items: center;
-      gap: 0.55rem;
-      text-decoration: none;
-      border: 1px solid var(--line);
-      padding: 0.5rem 0.7rem;
-      color: #000;
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: transform 160ms ease, background 160ms ease;
-    }
-
-    .menu a:hover,
-    .menu a.active {
-      background: #000;
-      color: #fff;
-      transform: translateX(2px);
-    }
-
-    .menu-dot {
-      width: 6px;
-      height: 6px;
-      background: currentColor;
-      flex: none;
-    }
-
-    .sidebar-foot {
-      border-top: 1px solid var(--line);
-      padding-top: var(--separator-space);
-      display: grid;
-      gap: 0.35rem;
-      color: var(--muted);
-      font-size: 0.8rem;
-    }
-
-    .sidebar-foot a {
-      text-decoration: none;
-      color: #000;
-      border-bottom: 1px solid transparent;
-      width: fit-content;
-    }
-
-    .sidebar-foot a:hover {
-      border-bottom-color: #000;
-    }
-
-    .content {
-      border: none;
-      background: var(--panel);
-      padding: 1rem;
-    }
-
-    .section {
-      border: none;
-      border-bottom: 1px solid var(--line);
-      padding: var(--separator-space) 0;
-      margin-bottom: 0;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 420ms ease, transform 420ms ease;
-      scroll-margin-top: 1rem;
-    }
-
-    .section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .section:last-child {
-      margin-bottom: 0;
-      border-bottom: none;
-    }
-
-    .section:first-child {
-      padding-top: 0;
-    }
-
-    .label {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: #000;
-      border: 1px solid #000;
-      padding: 0.28rem 0.58rem;
-      margin-bottom: 0.62rem;
-    }
-
-    h2 {
-      font-size: clamp(1.28rem, 2.6vw, 2rem);
-      line-height: 1.2;
-      margin-bottom: 0.45rem;
-      color: #000;
-    }
-
-    p {
-      color: var(--muted);
-      line-height: 1.72;
-      font-size: 0.94rem;
-    }
-
-    .hero-cta {
-      margin-top: 0.85rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-    }
-
-    .btn {
-      text-decoration: none;
-      border: 1px solid #000;
-      padding: 0.52rem 0.92rem;
-      font-weight: 600;
-      font-size: 0.83rem;
-      color: #000;
-      background: #fff;
-      transition: background 160ms ease, color 160ms ease;
-    }
-
-    .btn:hover {
-      background: #000;
-      color: #fff;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.8rem;
-      margin-top: 0.7rem;
-    }
-
-    .block {
-      border: none;
-      border-left: 1px solid var(--line);
-      padding: 0.1rem 0 0.1rem 0.7rem;
-      background: transparent;
-    }
-
-    .block h3 {
-      font-size: 0.94rem;
-      margin-bottom: 0.28rem;
-      color: #000;
-    }
-
-    .block p,
-    .block li,
-    .timeline .date {
-      font-size: 0.86rem;
-      color: var(--muted);
-    }
-
-    .skill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.6rem;
-    }
-
-    .skill-row span {
-      border: 1px solid #000;
-      padding: 0.3rem 0.6rem;
-      font-size: 0.8rem;
-      color: #000;
-    }
-
-    .timeline {
-      list-style: none;
-      display: grid;
-      gap: 0.7rem;
-      margin-top: 0.55rem;
-    }
-
-    .timeline li {
-      border-left: 1px solid #000;
-      padding-left: 0.72rem;
-      position: relative;
-    }
-
-    .timeline li::before {
-      content: '';
-      width: 7px;
-      height: 7px;
-      background: #000;
-      position: absolute;
-      left: -4px;
-      top: 0.38rem;
-    }
-
-    .timeline .role {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #000;
-    }
-
-    .contact-list {
-      list-style: none;
-      display: grid;
-      gap: 0.45rem;
-      margin-top: 0.55rem;
-    }
-
-    .contact-list a,
-    .contact-list span {
-      color: #000;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    @keyframes rise {
-      from {
-        opacity: 0;
-        transform: translateY(8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes blink {
-      0%, 100% {
-        background: #fff;
-        color: #000;
-      }
-      50% {
-        background: #000;
-        color: #fff;
-      }
-    }
-
-    @media (max-width: 1080px) {
-      .frame {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        position: relative;
-        top: 0;
-        max-height: none;
-      }
-    }
-
-    @media (max-width: 860px) {
-      .split {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <div class="frame">
     <aside class="sidebar">
       <div class="brand">
-        <img src="maxime_poix.png" alt="Logo" />
-        <h1>Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <img src="images/maxime_poix.png" alt="Logo" />
       </div>
 
       <ul class="menu" id="menu">
-        <li><a href="#home" class="active"><span class="menu-dot"></span>Home</a></li>
-        <li><a href="#profile"><span class="menu-dot"></span>Profile</a></li>
-        <li><a href="#history"><span class="menu-dot"></span>History</a></li>
+        <li><a href="#home" class="active">Engineering Team Lead</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#history">Experience</a></li>
       </ul>
 
       <div class="sidebar-foot">
-        <span>Lorem ipsum dolor sit amet.</span>
-        <a href="#">lorem.ipsum@example.com</a>
+        <div class="sidebar-actions">
+          <a class="sidebar-btn" href="https://www.google.com/maps/place/Lyon,+France/" target="_blank" rel="noopener noreferrer">Lyon, Rhone-Alpes, France</a>
+          <a class="sidebar-btn" href="mailto:contact.maximepoix@gmail.com">contact.maximepoix@gmail.com</a>
+          <a class="sidebar-btn" href="https://www.linkedin.com/in/maxime-poix" target="_blank" rel="noopener noreferrer">linkedin.com/in/maxime-poix</a>
+        </div>
       </div>
     </aside>
 
     <main class="content">
       <section class="section" id="home">
-        <span class="label">Home</span>
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu volutpat odio facilisis mauris sit amet massa vitae tortor condimentum lacinia quis vel eros.</p>
-        <div class="hero-cta">
-          <a class="btn" href="#">Lorem Ipsum</a>
-          <a class="btn" href="#">Dolor Sit Amet</a>
-        </div>
+        <h2>Engineering Team Lead</h2>
+        <p>Engineering Team Lead with 16+ years in software delivery, currently leading engineering teams at Chiliz and previously working at Norsys and Mister Auto. My scope combines team leadership, architecture guidance, and execution quality, with strong ownership on modernization, performance, observability, testing strategy, and agile delivery. Over the last period, I have also integrated AI into daily engineering workflows, using LLM-based assistants to accelerate discovery, code iteration, review preparation, and documentation quality while keeping production standards, reliability, and maintainability at the center of delivery.</p>
       </section>
 
       <section class="section" id="profile">
-        <span class="label">Profile</span>
-        <h2>Consectetur Adipiscing Elit</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet porttitor eget dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus.</p>
+        <h2>Profile</h2>
+        <p>Hands-on engineering and technical leadership across PHP and Node.js ecosystems, with proven experience in search integrations, performance monitoring, and product delivery in Scrum and Kanban contexts. I actively apply AI in software engineering practice, including prompt-driven exploration, implementation support, refactoring assistance, test scenario generation, and faster technical communication across teams. This AI usage is treated as an accelerator for engineering rigor rather than a shortcut, helping improve velocity, consistency, and decision quality while maintaining clean code, clear architecture boundaries, and reliable operational outcomes.</p>
 
         <div class="split">
           <div class="block">
-            <h3>Lorem Ipsum</h3>
-            <p>Quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui sapien.</p>
+            <div class="list-group">
+              <h3>Principal skills</h3>
+              <ul class="plain-list">
+                <li>AI-assisted engineering workflows, prompt design, agent-oriented tooling, Claude/Codex usage.</li>
+                <li>LLM-supported code review, documentation generation, and developer productivity optimization.</li>
+                <li>JIRA, Scrum, Agile methods, Codeception.</li>
+                <li>MySQL, Redis, Varnish, Zend Expressive, Algolia, Elasticsearch.</li>
+                <li>AngularJS, Vue.js, ES6, HTML, Mustache, Twig, Git, GitLab.</li>
+              </ul>
+            </div>
           </div>
           <div class="block">
-            <h3>Dolor Sit Amet</h3>
-            <p>Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
+            <div class="list-group">
+              <h3>Languages and education</h3>
+              <ul class="plain-list">
+                <li>English (full professional), Spanish (limited working).</li>
+                <li>EPSI - Master 2 in Computer Engineering.</li>
+                <li>IUT Saint-Etienne - Degree in Internet technologies.</li>
+                <li>Lycee Carriat - BTS Informatique de Gestion.</li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div class="skill-row">
-          <span>Lorem</span><span>Ipsum</span><span>Dolor</span><span>Sit</span><span>Amet</span><span>Consectetur</span>
+          <span>JIRA</span><span>Scrum</span><span>Agile</span><span>PHP</span><span>Node.js</span><span>Elasticsearch</span>
         </div>
       </section>
 
       <section class="section" id="history">
-        <span class="label">History</span>
-        <h2>Lorem Ipsum Timeline</h2>
-        <ul class="timeline">
-          <li>
-            <div class="role">Lorem Ipsum Dolor Sit</div>
-            <div class="date">2018 - Praesent</div>
-            <p>Urna molestie at elementum eu facilisis sed odio morbi quis commodo odio aenean.</p>
-          </li>
-          <li>
-            <div class="role">Amet Consectetur Adipiscing</div>
-            <div class="date">2013 - 2018</div>
-            <p>Vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue.</p>
-          </li>
-          <li>
-            <div class="role">Elit Sed Do Eiusmod</div>
-            <div class="date">2009 - 2013</div>
-            <p>Ac tortor dignissim convallis aenean et tortor at risus viverra adipiscing at in tellus.</p>
-          </li>
-        </ul>
+        <h2>Experience</h2>
+        <div class="experience-list">
+          <article class="experience-item">
+            <h3>Chiliz - Engineering Team Lead</h3>
+            <p class="date">Nov 2021 - Present</p>
+            <ul class="plain-list">
+              <li>Engineering leadership role based in Lyon.</li>
+              <li>Ownership of delivery and technical direction.</li>
+            </ul>
+          </article>
+          <article class="experience-item">
+            <h3>Norsys - Ingenieur Etudes et Developpement</h3>
+            <p class="date">Jun 2018 - Nov 2021</p>
+            <ul class="plain-list">
+              <li>Mission at Mister Auto with modernization initiatives.</li>
+              <li>Cross-team agile collaboration.</li>
+            </ul>
+          </article>
+          <article class="experience-item">
+            <h3>Mister Auto - Ingenieur Etudes et Developpement</h3>
+            <p class="date">Jun 2018 - Nov 2021</p>
+            <ul class="plain-list">
+              <li>Migration from PHP 5.4 to 7.4 on Zend Expressive.</li>
+              <li>Algolia and Vue.js rollout.</li>
+              <li>Performance monitoring with Dareboost and functional tests with Codeception.</li>
+              <li>Analytics and tracking optimization.</li>
+            </ul>
+          </article>
+          <article class="experience-item">
+            <h3>Mon UniVert / Terre Graphique - Full Stack Developer</h3>
+            <p class="date">Apr 2009 - Jun 2018</p>
+            <ul class="plain-list">
+              <li>Back-office and API development.</li>
+              <li>E-commerce projects, interactive maps, and SEO improvements.</li>
+              <li>PHP to Node.js migration and PDF OCR post-processing.</li>
+            </ul>
+          </article>
+        </div>
 
-        <ul class="contact-list">
-          <li><span>Email:</span> <a href="#">lorem.ipsum@example.com</a></li>
-          <li><span>Link:</span> <a href="#">lorem-ipsum-dolor</a></li>
-        </ul>
       </section>
     </main>
   </div>
 
-  <script>
-    const sections = document.querySelectorAll('.section');
-    const links = document.querySelectorAll('#menu a');
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    }, { threshold: 0.16 });
-
-    sections.forEach((section) => revealObserver.observe(section));
-
-    const navObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        links.forEach((link) => {
-          const active = link.getAttribute('href') === `#${entry.target.id}`;
-          link.classList.toggle('active', active);
-        });
-      });
-    }, { threshold: 0.45 });
-
-    sections.forEach((section) => navObserver.observe(section));
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
